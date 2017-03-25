@@ -1,0 +1,1 @@
+var angulaAppModulo = angular.module('lading_page', ['ngRoute']);

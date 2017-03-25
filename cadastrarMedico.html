@@ -1,0 +1,24 @@
+<div ng-app class="container" ng-controller="medicoController">
+
+    <div class="row">
+        <div class="page-header">
+            <h1>Cadastrar</h1>
+        </div>
+    </div>    
+    
+    <div class="row">
+        <form name="form" class="form-inline">
+            
+            <input type="text" ng-model="medico.nome" placeholder="Nome" required class="form-control">
+            <input type="email" ng-model="medico.email" placeholder="Email" required class="form-control">
+            <input type="text" ng-model="medico.contato" ng-pattern="/^(0[0-9]{2})9[0-9]{4}-[0-9]{4}" placeholder="Contato" required class="form-control">
+            <input type="text" ng-model="medico.crm" ng-minlength="8" placeholder="CRM" required class="form-control">
+            <input type="text" ng-model="medico.cpf" ng-pattern="/^[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}" placeholder="CPF" required class="form-control">
+            <input type="text" ng-model="endereco" placeholder="Endereço" required ng-minlength="4" ng-maxlength="50" class="form-control">
+            
+            <button ng-disabled="form.$invalid" class="btn btn-primary" ng-click="adicionaMedico()">
+                Cadastrar
+            </button>            
+        </form>
+    </div>
+</div>
